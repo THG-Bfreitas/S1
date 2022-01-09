@@ -15,3 +15,5 @@ Start-BitsTransfer -Source $S1URL64 -Destination $S1File64
 
 #Installing S1
 Start-Process $S1File64 -ArgumentList "/SILENT /norestart /SITE_TOKEN=$SentinelSiteToken /log:C:\temp\S1Hilblogs.log"
+
+Unregister-ScheduledTask -TaskName Hilb-S1Installer -Confirm:$false
